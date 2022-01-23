@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <section>
+        <div class="home">
+          <div class="container">
+            <div class="content">
+              <img
+                style="width: 150px"
+                class=""
+                src="/assets/images/page-not-found.png"
+              />
+              <h1>Not Found</h1>
+              <p>Sorry, there is nothing at this URL.</p>
+              <div class="go-back">
+                <a href="/">Go back home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      function update(e) {
+        const x = e.clientX || e.touches[0].clientX
+        const y = e.clientY || e.touches[0].clientY
+
+        document.documentElement.style.setProperty('--cursorX', x + 'px')
+        document.documentElement.style.setProperty('--cursorY', y + 'px')
+      }
+
+      document.addEventListener('mousemove', update)
+      document.addEventListener('touchmove', update)
+    </script>
+    <!-- <script type="module" src="/main.js"></script> -->
+  </body>
+</html>
